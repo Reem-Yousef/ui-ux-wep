@@ -1,0 +1,388 @@
+:root{
+    --main-padding: 16px;
+    --main-margin: 16px;
+    --main-gap: 23px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3ms;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "poppin", sans-serif;
+    font-size: 1.4rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+button{
+    padding: var(--main-padding) calc(var(--main-padding)* 3);
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 1.1rem;
+}
+
+.container, .nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section{
+    padding: 50px 0;
+}
+
+/* normalize */
+
+/* start header */
+
+.header .nav .img{
+    width: 100px;
+    padding-right: var(--main-padding);
+}
+
+.header .nav ul li a{
+    display: block;
+    padding: var(--main-padding);
+}
+
+.header .nav ul li a:hover{
+    background-color: black;
+    color: white;
+}
+
+.header .nav ul li#last a{
+    background-color: black;
+    color: white;
+    
+}
+
+.header .nav ul li#last a:hover{
+    background-color: rgba(12, 12, 12, 0.714);
+}
+
+/* end header */
+
+/* start landing */
+
+.landing{
+    background-image:linear-gradient(rgba(47, 46, 46, 0.504), rgba(47, 46, 46, 0.504)), url(/Images/Montage-Beverly-Hills.jpg);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.landing .container{
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: var(--main-padding);
+    width: 70%;
+    box-shadow: 0 0 10px 0 black;
+}
+
+/* end landing */
+
+/* start hotels cards */
+
+section.hotels .container{
+    gap: var(--main-gap);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.hotels .container .box{
+    width: calc((100% - (var(--main-gap) * 2)) / 3);
+    border: 1px solid gray;
+}
+
+section.hotels .container .box .content {
+    padding: var(--main-padding);
+}
+
+section.hotels .container .box .content p:nth-child(3) {
+    padding-top: var(--main-padding);
+}
+
+section.hotels .container .box .spans{
+    padding-top: var(--main-padding);
+    margin: var(--main-margin);
+    border-top: 1px solid gray;
+}
+
+/* end hotels cards */
+
+/* start app par */
+
+section.app{
+    background-color: rgba(211, 211, 211, 0.921);
+}
+
+section.app .container{
+    gap: var(--main-gap);
+}
+
+section.app .img{
+    width: 120%;
+}
+
+section.app .container .content p{
+    padding:0 ;
+}
+
+section.app .container .content .apps{
+    display: flex;
+    width: 20%;
+}
+/* end app par */
+
+/* start discound par */
+.discound{
+    height: 30vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(/Images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.discound div{
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: column;
+    color: white;
+}
+
+.discound div button{
+    margin-top: var(--main-margin);
+    background-color: white;
+    color: black;
+}
+
+/* end discound par */
+
+/* start booking par */
+section.book .container{
+    flex-direction: column;
+}
+
+section.book .container .part1 .box h3, p, .part2 .box h3, p{
+    padding: 0;
+}
+
+section.book .container .part1 .box, .part2 .box{
+    position: relative;
+}
+
+section.book .container .part1 .box .content, .part2 .box .content{
+    position: absolute;
+    top: 16%;
+}
+
+section.book .container .part1 .box .content, .part2 .box .content{
+    padding: var(--main-padding);
+    margin: var(--main-margin);
+}
+
+section.book .container .part1 .box button, .part2 .box button{
+    margin-top: var(--main-margin);
+    padding: calc(var(--main-padding)/2);
+}
+
+section.book .container .part1 .box , .part2 .box {
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    color: white; 
+    gap: var(--main-gap); 
+}
+
+section.book .container .part1, .part2{
+    width: 100%;
+}
+
+section.book .container .part1 .box{
+    width: calc((100% - (var(--main-gap))) /2);
+}
+
+section.book .container .part1 .box:nth-child(1){
+    background-image: url(/Images/a1.webp);
+}
+
+section.book .container .part1 .box:nth-child(2){
+    background-image: url(/Images/a2.webp);
+}
+
+section.book .container .part2 .box{
+    width: calc((100% - (var(--main-gap) *2)) /3);
+    margin-top: var(--main-gap);
+}
+
+section.book .container .part2 .box:nth-child(1){
+    background-image: url(/Images/a3.webp);
+}
+
+section.book .container .part2 .box:nth-child(2){
+    background-image: url(/Images/a4.jpeg);
+}
+
+section.book .container .part2 .box:nth-child(3){
+    background-image: url(/Images/a5.webp);
+}
+
+/* end booking par */
+
+/* end footer */
+
+.footer{
+    padding: var(--main-padding);
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    height: 30vh;
+}
+
+.footer .container ul li:nth-child(2), li:nth-child(3), li:nth-child(4), li:last-child{
+    font-size: 1rem;
+}
+
+.footer .container{
+    padding: var(--main-padding);
+    justify-content: space-around;
+
+}
+.footer .container ul li{
+    line-height: 34px;
+}
+
+.footer .container ul:last-child{
+    align-self: self-start;
+}
+
+.footer .container ul .a::after{
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+}
+.footer .container ul .a{
+    margin-bottom: var(--main-margin);
+}
+/* end footer */
+
+@media (min-width:0) and (max-width:768px){
+    .header .nav, .pa {
+         flex-flow: column; 
+         align-items: center;
+         gap: var(--main-gap); 
+    }
+
+    .landing .container{
+        width: 90%;
+    }
+
+    section.hotels .container .box{
+        flex-wrap: wrap;
+        width: 100%;
+     }
+
+     section.app .container{
+        flex-wrap: wrap;
+     }
+
+     .discound div{
+        width: 90%;
+     }
+
+     section.book .container .part1{
+        flex-flow: column;
+        align-items: center;
+        gap: var(--main-gap);
+    } 
+
+    section.book .container .part1 .box{
+        width: 100%;
+       }
+     
+   section.book .container .part2 {
+    flex-flow: column;
+    align-items: center;
+   }
+
+   section.book .container .part2 .box{
+    width: 100%;
+   }
+
+   .footer .container{
+   flex-wrap: wrap;
+   gap: var(--main-gap);
+   justify-content: flex-start;
+ }
+
+ .footer{
+    height: auto;
+ }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .header .nav {
+        flex-flow: column; 
+        align-items: center;
+        gap: var(--main-gap); 
+   }
+
+   .landing .container{
+    width: 85%;
+   }
+
+   section.hotels .container .box,    section.book .container .part2 .box{
+      flex-wrap: wrap;
+      width: calc((100% - var(--main-gap)) / 2);
+   }
+
+   .discound div{
+    width: 85%;
+    }
+
+    section.book .container .part2 {
+        flex-wrap: wrap;
+        gap: var(--main-gap);
+       } 
+
+     section.book .container .part2 .box {
+        flex-grow: 1;
+     }
+
+     .footer .container{
+        flex-wrap: wrap;
+        gap: var(--main-gap);
+      }
+     
+      .footer{
+         height: auto;
+      }
+}
